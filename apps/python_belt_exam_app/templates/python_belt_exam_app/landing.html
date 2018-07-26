@@ -36,7 +36,7 @@
                                 <td>{{trip.description}}</td>
                                 <td>
                                     {% if trip.trip_users.id == request.session.id %}
-                                        <a href=/delete/{{trip.id}}>Delete</a>
+                                        <a href=/delete/{{trip.id}}>Delete</a> <b>|</b>
                                     {% endif %}
                                     <a href=/cancel/{{trip.id}}>Cancel</a>
                                 </td>
@@ -74,5 +74,5 @@
                     </table>
                 </div>
             </div>
-            <a href="/addtrip">Add a Trip</a>
+            <a href="/addtrip" id="new_trip" class="btn btn-primary" role="button">Add a Trip</a>
         </div>

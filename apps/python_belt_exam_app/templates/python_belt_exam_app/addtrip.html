@@ -15,38 +15,40 @@
                 <a href="/logout"><h3>Logout</h3></a>
                 <a href="/travels"><h3>Back</h3></a>
             </div>
-            <form action="/process_trip", method='post'>
-                {% csrf_token %}
-              <div class="form-group row">
-                <label for="destination" class="col-sm-2 col-form-label">Destination</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" id="destination" name="destination">
+            <div class="add_trip_form">
+              <form action="/process_trip", method='post'>
+                  {% csrf_token %}
+                <div class="form-group row">
+                  <label for="destination" class="col-sm-2 col-form-label"><b>Destination:</b></label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="destination" name="destination" placeholder="Orlando, Florida">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="description" class="col-sm-2 col-form-label">Description</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" id="description" name="description">
+                <div class="form-group row">
+                  <label for="description" class="col-sm-2 col-form-label"><b>Description:</b></label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Go to the beach">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="datefrom" class="col-sm-3 col-form-label">Travel Date From</label>
-                <div class="col-sm-5">
-                  <input type="date" class="form-control" id="datefrom" name="datefrom" placeholder="YYYY-MM-DD">
+                <div class="form-group row">
+                  <label for="datefrom" class="col-sm-2 col-form-label"><b>Travel Date From:</b></label>
+                  <div class="col-sm-3">
+                    <input type="date" class="form-control" id="datefrom" name="datefrom" placeholder="YYYY-MM-DD">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="dateto" class="col-sm-3 col-form-label">Travel Date To</label>
-                <div class="col-sm-5">
-                  <input type="date" class="form-control" id="dateto" name="dateto" placeholder="YYYY-MM-DD">
+                <div class="form-group row">
+                  <label for="dateto" class="col-sm-2 col-form-label"><b>Travel Date To:</b></label>
+                  <div class="col-sm-3">
+                    <input type="date" class="form-control" id="dateto" name="dateto" placeholder="YYYY-MM-DD">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-8">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group row">
+                  <div class="col-sm-2">
+                    <button type="submit" id="add_trip_submit_btn" class="btn btn-primary">Submit</button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
             {% if messages %}
                 <ul class="messages">
                     {% for message in messages %}
@@ -54,6 +56,7 @@
                     {% endfor %}
                 </ul>
             {% endif %}
+            <p>&nbsp;</p>
         </div>
     </body>
 </html>
