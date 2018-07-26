@@ -125,12 +125,24 @@ def cancel_process(request, trip_id):
     me = User.objects.get(id=request.session['isloggedin'])
     trip = Trip.objects.get(id=trip_id)
     trip.all_users.remove(me)
-    return redirect('/travels')
+    context = {
+                "alltrips" : Trip.objects.exclude(all_users=request.session['isloggedin']),
+                "mytrips" : me.all_trips.all(),
+            }
+    # return redirect('/travels')
+    return render(request,'python_belt_exam_app/all.html', context)
 
 def delete_process(request, trip_id):
+    me = User.objects.get(id=request.session['isloggedin'])
     b = Trip.objects.get(id=trip_id)
     b.delete()
-    return redirect('/travels')
+    context = {
+                "alltrips" : Trip.objects.exclude(all_users=request.session['isloggedin']),
+                "mytrips" : me.all_trips.all(),
+            }
+    #return redirect('/travels')
+    return render(request,'python_belt_exam_app/all.html', context)
+
 
 # Clears out session / logs out the user
 def logout(request):
