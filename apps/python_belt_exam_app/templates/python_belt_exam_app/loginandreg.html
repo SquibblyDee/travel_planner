@@ -16,6 +16,13 @@
                 <a href=# id="login"><h4>Login</h4></a>
                 <a href=# id="register"><h4>Registration</h4></a>
             </div>
+            <div class="jumbotron">
+                <div class="container2">
+                    <center>
+                        <h1><b>Trip Buddy makes planning trips easy!</b></h1>
+                    </center>
+                </div>
+            </div>
             <div class="registration" style="display: none;">
                 <h3>Register</h3>
                 <!-- This is the registration form to /process_register -->
@@ -55,7 +62,8 @@
             <script>
             $(document).ready(function() {
                 $('#register').click(function() {
-                    $('.registration').slideToggle("slow");
+                    $('.login').hide();
+                        $('.registration').slideToggle("slow");
                 });
             });
             </script>
@@ -83,10 +91,12 @@
             <script>
             $(document).ready(function() {
                 $('#login').click(function() {
-                    $('.login').slideToggle("slow");
+                    $('.registration').hide();
+                        $('.login').slideToggle("slow");
                 });
             });
             </script>
+            <p>&nbsp;</p>
         </div>
     </body>
 </html>

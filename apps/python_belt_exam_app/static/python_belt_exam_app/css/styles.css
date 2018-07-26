@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 
 .container{
@@ -94,12 +94,13 @@ button{
 
 .login-header h4{
     display: inline-block;
-    margin-left: 3%;
     margin-right: 3%;
     border-left: 4px solid #015249;
     padding: 2.5% 0%;
-    padding-left: 1%;
+    padding-left: 3%;
     float: right;
+    text-decoration: underline !important;
+    font-weight: bold;
 }
 
 a{
@@ -185,4 +186,16 @@ table{
 
 a{
     text-decoration: underline !important;
+}
+
+.jumbotron{
+    background-image: url(https://static.pexels.com/photos/457882/pexels-photo-457882.jpeg);
+    background-position: 0% 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    border-radius: 20px !important;
+    margin-top: 3%;
+    box-shadow: 2px 2px black;
 }

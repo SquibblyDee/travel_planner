@@ -19,25 +19,25 @@
               <form action="/process_trip", method='post'>
                   {% csrf_token %}
                 <div class="form-group row">
-                  <label for="destination" class="col-sm-2 col-form-label"><b>Destination:</b></label>
+                  <label for="destination" class="col-sm-3 col-form-label"><b>Destination:</b></label>
                   <div class="col-sm-5">
                     <input type="text" class="form-control" id="destination" name="destination" placeholder="Orlando, Florida">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="description" class="col-sm-2 col-form-label"><b>Description:</b></label>
+                  <label for="description" class="col-sm-3 col-form-label"><b>Description:</b></label>
                   <div class="col-sm-5">
                     <input type="text" class="form-control" id="description" name="description" placeholder="Go to the beach">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="datefrom" class="col-sm-2 col-form-label"><b>Travel Date From:</b></label>
+                  <label for="datefrom" class="col-sm-3 col-form-label"><b>Travel Date From:</b></label>
                   <div class="col-sm-3">
                     <input type="date" class="form-control" id="datefrom" name="datefrom" placeholder="YYYY-MM-DD">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="dateto" class="col-sm-2 col-form-label"><b>Travel Date To:</b></label>
+                  <label for="dateto" class="col-sm-3 col-form-label"><b>Travel Date To:</b></label>
                   <div class="col-sm-3">
                     <input type="date" class="form-control" id="dateto" name="dateto" placeholder="YYYY-MM-DD">
                   </div>
