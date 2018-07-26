@@ -114,7 +114,8 @@ def join_process(request, trip_id):
     me = User.objects.get(id=request.session['isloggedin'])
     trip = Trip.objects.get(id=trip_id)
     trip.all_users.add(me)
-    return redirect('/view/{}'.format(trip_id))
+    #return redirect('/view/{}'.format(trip_id))
+    return redirect('/travels')
 
 def cancel_process(request, trip_id):
     me = User.objects.get(id=request.session['isloggedin'])
