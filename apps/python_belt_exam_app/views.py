@@ -114,8 +114,12 @@ def join_process(request, trip_id):
     me = User.objects.get(id=request.session['isloggedin'])
     trip = Trip.objects.get(id=trip_id)
     trip.all_users.add(me)
-    #return redirect('/view/{}'.format(trip_id))
-    return redirect('/travels')
+    context = {
+                "alltrips" : Trip.objects.exclude(all_users=request.session['isloggedin']),
+                "mytrips" : me.all_trips.all(),
+            }
+    #return redirect('/travels')
+    return render(request,'python_belt_exam_app/all.html', context)
 
 def cancel_process(request, trip_id):
     me = User.objects.get(id=request.session['isloggedin'])
