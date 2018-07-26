@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px solid red; */
+}
+
+.registration{
+    width: 45%;
+    display: inline-block;
+    margin: 0% 4% 0% 4%;
+}
+
+.login{
+    width: 45%;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.login p{
+    color: red;
+    font-size: 14pt;
+}
+button{
+    float: right;
+    box-shadow: 3px 3px black !important;
+    border-radius: 0px !important;
+}
+/* EVERYTHING ABOVE HERE NEEDS TO STAY THE SAME */
+
+h1{
+    margin-bottom: 5% !important;
+    margin-top: 3% !important;
+}
+
+.headerino h3{
+    display: inline-block;
+    margin-right: 35%;
+}
+
+.headerino{
+}
+
+a{
+    float: right;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.thetrip{
+    margin-bottom: 5%;
+    padding-top: 5% !important;
+}
+
+.trip_table{
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+}

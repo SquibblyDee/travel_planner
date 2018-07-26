@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <title>Add a Trip</title>
+        <!-- linking a css style sheet -->
+        <link rel="stylesheet" href="{% static 'python_belt_exam_app/css/styles.css' %}">
+        <!-- Linking Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="headerino">
+                <h3>Add a Trip</h3>
+                <a href="/logout"><h3>Logout</h3></a>
+                <a href="/travels"><h3>Back</h3></a>
+            </div>
+            <form action="/process_trip", method='post'>
+                {% csrf_token %}
+              <div class="form-group row">
+                <label for="destination" class="col-sm-2 col-form-label">Destination</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="destination" name="destination">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="description" name="description">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="datefrom" class="col-sm-3 col-form-label">Travel Date From</label>
+                <div class="col-sm-5">
+                  <input type="date" class="form-control" id="datefrom" name="datefrom" placeholder="YYYY-MM-DD">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="dateto" class="col-sm-3 col-form-label">Travel Date To</label>
+                <div class="col-sm-5">
+                  <input type="date" class="form-control" id="dateto" name="dateto" placeholder="YYYY-MM-DD">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} style="color: red" class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </body>
+</html>

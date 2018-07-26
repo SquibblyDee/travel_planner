@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <title>A Web Page</title>
+        <!-- linking a css style sheet -->
+        <link rel="stylesheet" href="{% static 'python_belt_exam_app/css/styles.css' %}">
+        <!-- Linking Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to Trip Buddy</h1>
+            <div class="registration">
+                <h3>Register</h3>
+                <!-- This is the registration form to /process_register -->
+                <form action="/process_register" , method='post'>
+                    {% csrf_token %}
+                    <!-- Displays error messages if any exist -->
+                    <div class="form-group">
+                        <label for="input_first_name">First name:</label>
+                        <input type="text" name="input_first_name" class="form-control" id="input_first_name" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="input_last_name">Last name:</label>
+                        <input type="text" name="input_last_name" class="form-control" id="input_last_name" placeholder="Enter last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="input_email">Email:</label>
+                        <input type="text" name="input_email" class="form-control" id="input_email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="input_password">Password:</label>
+                        <input type="password" name="input_password" class="form-control" id="input_password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="input_confirm_password">Confirm PW:</label>
+                        <input type="password" name="input_confirm_password" class="form-control" id="input_confirm_password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li{% if message.tags %} style="color: red" class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </form>
+            </div>
+            <!-- This is the login form to /process_login -->
+            <div class="login">
+                <h3>Login</h3>
+                <form action='/process_login' , method='post'>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="login_email">Email:</label>
+                        <input type="email" name="login_email" class="form-control" id="login_email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login_password">Password:</label>
+                        <input type="password" name="login_password" class="form-control" id="login_password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    {% if 'error' in request.session %}
+                        {% if request.session.error != "" %}
+                            <p>{{ request.session.error }}</p>
+                        {% endif %}
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
