@@ -2,16 +2,21 @@
 {% load staticfiles %}
 <html lang="en">
     <head>
-        <title>A Web Page</title>
+        <title>Trip Buddy</title>
         <!-- linking a css style sheet -->
         <link rel="stylesheet" href="{% static 'python_belt_exam_app/css/styles.css' %}">
         <!-- Linking Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
         <div class="container">
-            <h1>Welcome to Trip Buddy</h1>
-            <div class="registration">
+            <div class="login-header">
+                <h1>Welcome to Trip Buddy</h1>
+                <a href=# id="login"><h4>Login</h4></a>
+                <a href=# id="register"><h4>Registration</h4></a>
+            </div>
+            <div class="registration" style="display: none;">
                 <h3>Register</h3>
                 <!-- This is the registration form to /process_register -->
                 <form action="/process_register" , method='post'>
@@ -47,8 +52,15 @@
                     {% endif %}
                 </form>
             </div>
+            <script>
+            $(document).ready(function() {
+                $('#register').click(function() {
+                    $('.registration').slideToggle("slow");
+                });
+            });
+            </script>
             <!-- This is the login form to /process_login -->
-            <div class="login">
+            <div class="login" style="display: none;">
                 <h3>Login</h3>
                 <form action='/process_login' , method='post'>
                     {% csrf_token %}
@@ -68,6 +80,13 @@
                     {% endif %}
                 </form>
             </div>
+            <script>
+            $(document).ready(function() {
+                $('#login').click(function() {
+                    $('.login').slideToggle("slow");
+                });
+            });
+            </script>
         </div>
     </body>
 </html>

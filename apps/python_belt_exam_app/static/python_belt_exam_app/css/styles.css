@@ -8,43 +8,44 @@
     width: 45%;
     display: inline-block;
     margin: 0% 4% 0% 4%;
+    margin-left: 30%;
 }
 
 .login{
     width: 45%;
     display:inline-block;
     vertical-align: top;
+    margin-left: 30%;
 }
 
 .login p{
     color: red;
     font-size: 14pt;
 }
+
 button{
     float: right;
     box-shadow: 3px 3px black !important;
     border-radius: 0px !important;
+    margin-bottom: 5% !important;
 }
 /* EVERYTHING ABOVE HERE NEEDS TO STAY THE SAME */
 
-h1{
-    margin-bottom: 5% !important;
-    margin-top: 3% !important;
-}
+/* h1{ */
+    /* margin-bottom: 5% !important; */
+    /* margin-top: 3% !important; */
+/* } */
 
 .headerino h3{
     display: inline-block;
     margin-right: 35%;
 }
 
-.headerino{
-}
-
-a{
-    float: right;
-    margin-left: 3%;
-    margin-right: 3%;
-}
+/* a{ */
+    /* float: right; */
+    /* margin-left: 3%; */
+    /* margin-right: 3%; */
+/* } */
 
 .thetrip{
     margin-bottom: 5%;
@@ -54,4 +55,70 @@ a{
 .trip_table{
     margin-top: 5% !important;
     margin-bottom: 5% !important;
+}
+
+/* BELOW HERE ARE ALL OUR NEW VISUAL TWEAKS */
+
+.container{
+    background: linear-gradient(-90deg, #77C9D4, #57BC90);
+    height: 700px;
+}
+
+.login-header{
+    background: linear-gradient(-90deg, rgb(255, 255, 255), #A5A5AF);
+    margin-left: -1.6%;
+    margin-right: -1.6%;
+    margin-bottom:  5%;
+    border-bottom: 2px solid #015249;
+    height: 88px;
+}
+
+.login-header h1{
+    display: inline-block;
+    margin-right: 23%;
+}
+
+.login-header h4{
+    display: inline-block;
+    margin-left: 3%;
+    border-left: 3px solid #015249;
+    padding: 3% 0%;
+    padding-left: 1%;
+}
+
+a{
+    color: #77C9D4 !important;
+    font-weight: bold;
+}
+
+#my_trips, #all_trips{
+    background-color: #A5A5AF;
+}
+
+table, thead, tr, td, th{
+    outline: 3px solid #015249;
+}
+
+.trip_table h3{
+    color: white;
+}
+
+.other_trip_table h3{
+    color: white;
+}
+
+.trip_table td{
+    color: white;
+}
+
+.other_trip_table td{
+    color: white;
+}
+
+.trip_table th{
+    color: white;
+}
+
+.other_trip_table th{
+    color: white;
 }
