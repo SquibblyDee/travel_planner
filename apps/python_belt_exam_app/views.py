@@ -98,7 +98,12 @@ def processtrip(request, methods=['POST']):
         print("ME: ", me.id)
         # THIS ADDS THE STUFF TO OUR LINKING TABLE
         trip.all_users.add(me)
-        return redirect('/travels')
+        context = {
+                "alltrips" : Trip.objects.exclude(all_users=request.session['isloggedin']),
+                "mytrips" : me.all_trips.all(),
+            }
+        #return redirect('/travels')
+        return render(request,'python_belt_exam_app/all.html', context)
 
 def show_process(request, trip_id):
     trip = Trip.objects.get(id=trip_id)
