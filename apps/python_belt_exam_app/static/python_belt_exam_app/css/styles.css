@@ -66,11 +66,6 @@ button{
     padding-top: 5% !important;
 }
 
-.trip_table{
-    margin-top: 5% !important;
-    margin-bottom: 5% !important;
-}
-
 /* BELOW HERE ARE ALL OUR NEW VISUAL TWEAKS */
 
 .container{
@@ -106,7 +101,7 @@ button{
 }
 
 a{
-    color: #77C9D4 !important;
+    color: rgb(32, 144, 163) !important;
     font-weight: bold;
 }
 
@@ -141,6 +136,9 @@ table{
     box-shadow: 2px 2px black;
     background-color: #77C9D4;
     border: 1px solid #A5A5AF !important;
+    width: 20%;
+    height: 50px;
+    font-size: 16pt;
 }
 
 .add_trip_form{
@@ -192,6 +190,10 @@ a{
     text-decoration: underline !important;
 }
 
+a:hover{
+    color: #77C9D4 !important;
+}
+
 .jumbotron{
     background-image: url(https://static.pexels.com/photos/457882/pexels-photo-457882.jpeg);
     background-position: 0% 70%;
@@ -218,4 +220,9 @@ a{
 
 th{
     font-size: 14pt !important;
+}
+
+#add_trip_submit_btn{
+    width: 60% !important;
+    height: 60px;
 }

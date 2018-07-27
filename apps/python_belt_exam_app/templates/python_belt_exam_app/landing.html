@@ -79,38 +79,45 @@
             <div class="add_trip_form" style="display: none;">
                 <form action="/process_trip", method='post' id="add_new_trip">
                     {% csrf_token %}
-                  <div class="form-group row">
-                    <label for="destination" class="col-sm-3 col-form-label"><b>Destination:</b></label>
-                    <div class="col-sm-5">
-                      <input type="text" class="form-control" id="destination" name="destination" placeholder="Orlando, Florida">
+                    <div class="form-group row">
+                      <label for="destination" class="col-sm-3 col-form-label"><b>Destination:</b></label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="destination" name="destination" placeholder="Orlando, Florida">
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="description" class="col-sm-3 col-form-label"><b>Description:</b></label>
-                    <div class="col-sm-5">
-                      <input type="text" class="form-control" id="description" name="description" placeholder="Go to the beach">
+                    <div class="form-group row">
+                      <label for="description" class="col-sm-3 col-form-label"><b>Description:</b></label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="description" name="description" placeholder="Go to the beach">
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="datefrom" class="col-sm-3 col-form-label"><b>Travel Date From:</b></label>
-                    <div class="col-sm-3">
-                      <input type="date" class="form-control" id="datefrom" name="datefrom" placeholder="YYYY-MM-DD">
+                    <div class="form-group row">
+                      <label for="datefrom" class="col-sm-3 col-form-label"><b>Travel Date From:</b></label>
+                      <div class="col-sm-3">
+                        <input type="date" class="form-control" id="datefrom" name="datefrom" placeholder="YYYY-MM-DD">
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="dateto" class="col-sm-3 col-form-label"><b>Travel Date To:</b></label>
-                    <div class="col-sm-3">
-                      <input type="date" class="form-control" id="dateto" name="dateto" placeholder="YYYY-MM-DD">
+                    <div class="form-group row">
+                      <label for="dateto" class="col-sm-3 col-form-label"><b>Travel Date To:</b></label>
+                      <div class="col-sm-3">
+                        <input type="date" class="form-control" id="dateto" name="dateto" placeholder="YYYY-MM-DD">
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-sm-2">
-                      <button type="submit" id="add_trip_submit_btn" class="btn btn-primary">Submit</button>
+                    <div class="form-group row">
+                      <div class="col-lg-4">
+                        <button type="submit" id="add_trip_submit_btn" class="btn btn-primary">Submit</button>
+                        <!-- {% if messages %} -->
+                            <!-- <ul class="messages"> -->
+                                <!-- {% for message in messages %} -->
+                                    <!-- <li{% if message.tags %} style="color: red" class="{{ message.tags }}"{% endif %}>{{ message }}</li> -->
+                                <!-- {% endfor %} -->
+                            <!-- </ul> -->
+                        <!-- {% endif %} -->
+                      </div>
                     </div>
-                  </div>
-                </form>
-              </div>
-              <p>&nbsp;</p>
+                  </form>
+                </div>
+                <p>&nbsp;</p>
         </div>
         <script>
             $(document).ready(function() {

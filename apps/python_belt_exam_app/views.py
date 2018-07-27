@@ -80,6 +80,7 @@ def addtrip(request):
     return render(request, 'python_belt_exam_app/addtrip.html')
 
 def processtrip(request, methods=['POST']):
+    me = User.objects.get(id=request.session['isloggedin'])
     # pass the post data to the method we wrote and save the response in a variable called errors
     errors = Trip.objects.basic_validator2(request.POST)
     # check if the errors object has anything in it
@@ -89,7 +90,12 @@ def processtrip(request, methods=['POST']):
             messages.error(request, value)
             print("WEVE HIT AN ERROR")
         # redirect the user back to the form to fix the errors
-        return redirect('/addtrip')
+        context = {
+                "alltrips" : Trip.objects.exclude(all_users=request.session['isloggedin']),
+                "mytrips" : me.all_trips.all(),
+            }
+        #return redirect('/addtrip')
+        return render(request,'python_belt_exam_app/all.html', context, id)
     else:
         me = User.objects.get(id=request.session['isloggedin'])
         Trip.objects.create(destination=request.POST['destination'], description=request.POST['description'], trip_users=me, datefrom=request.POST['datefrom'], dateto=request.POST['dateto'])
