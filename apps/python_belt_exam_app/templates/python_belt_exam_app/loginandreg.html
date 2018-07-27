@@ -10,18 +10,35 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
-            <div class="login-header">
-                <h1>Welcome to Trip Buddy</h1>
-                <a href=# id="login"><h4>Login</h4></a>
-                <a href=# id="register"><h4>Registration</h4></a>
+        <div class="login-header">
+            <h1>Welcome to Trip Buddy</h1>
+            <a href=# id="login"><h4>Login</h4></a>
+            <a href=# id="register"><h4>Registration</h4></a>
+        </div>
+        <div class="jumbotron" style="background:transparent !important">
+            <div id="video_overlays"></div>
+            <video id="video-background" preload muted autoplay loop>
+                <source src="https://static.videezy.com/system/resources/previews/000/002/427/original/waves-on-the-beach.mp4" type="video/mp4">
+            </video>
+            <div class="container2">
+                <center>
+                    <h1><b>Trip Buddy makes planning trips easy!</b></h1>
+                </center>
             </div>
-            <div class="jumbotron">
-                <div class="container2">
-                    <center>
-                        <h1><b>Trip Buddy makes planning trips easy!</b></h1>
-                    </center>
-                </div>
+        </div>
+        <div class="login_bg">
+            <p>&nbsp;</p>
+            <div class="welcome_text">
+                <h2>Who are we?</h2>
+                <h4>We are a group of total buddies who will help you plan a super dank trip.</h4>
+                <h4>&nbsp;</h4>
+                <h2>What do we do?</h2>
+                <h4>We provide a wonderfully useful service that you can use to schedule trips.</h4> 
+                <h4>You are also able to see and join trips created by our other members!</h4>
+                <h4>&nbsp;</h4>
+                <h2>Why do we do it?</h2>
+                <h4>We believe everyone should take more time to explore the world around them.</h4>
+                <h4>&nbsp;</h4>
             </div>
             <div class="registration" style="display: none;">
                 <h3>Register</h3>
@@ -46,7 +63,7 @@
                         <input type="password" name="input_password" class="form-control" id="input_password" placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <label for="input_confirm_password">Confirm PW:</label>
+                        <label for="input_confirm_password">Confirm Password:</label>
                         <input type="password" name="input_confirm_password" class="form-control" id="input_confirm_password" placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-primary">Register</button>
@@ -64,6 +81,9 @@
                 $('#register').click(function() {
                     if ($('.login').is(':visible')) {
                         $('.login').slideToggle("slow");
+                    }
+                    if ($('.welcome_text').is(':visible')) {
+                        $('.welcome_text').slideToggle("slow");
                     }
                         $('.registration').slideToggle("slow");
                 });
@@ -90,17 +110,20 @@
                     {% endif %}
                 </form>
             </div>
-            <script>
-            $(document).ready(function() {
-                $('#login').click(function() {
-                    if ($('.registration').is(':visible')) {
-                        $('.registration').slideToggle("slow");
-                    }
-                        $('.login').slideToggle("slow");
-                });
-            });
-            </script>
-            <p>&nbsp;</p>
         </div>
+        <script>
+        $(document).ready(function() {
+            $('#login').click(function() {
+                if ($('.registration').is(':visible')) {
+                    $('.registration').slideToggle("slow");
+                }
+                if ($('.welcome_text').is(':visible')) {
+                    $('.welcome_text').slideToggle("slow");
+                }
+                    $('.login').slideToggle("slow");
+            });
+        });
+        </script>
+        <p>&nbsp;</p>
     </body>
 </html>
