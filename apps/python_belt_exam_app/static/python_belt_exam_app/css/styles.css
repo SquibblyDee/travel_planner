@@ -20,7 +20,7 @@
     width: 45%;
     display:inline-block;
     vertical-align: top;
-    margin-left: 30%;
+    margin-left: 36.5%;
 }
 
 .login p{
@@ -135,7 +135,7 @@ table{
 
 #new_trip{
     margin-bottom: 3%;
-    margin-left: 36%;
+    margin-left: 38%;
     color: white !important;
     box-shadow: 2px 2px #015249;
     background-color: #77C9D4;
@@ -233,7 +233,7 @@ th{
 }
 
 #add_trip_submit_btn{
-    width: 60% !important;
+    width: 50% !important;
     height: 60px;
     font-size: 16pt;
     text-decoration: underline !important;
@@ -273,7 +273,16 @@ input{
 }
 
 #register_btn{
-    float: right;
-    margin-right: 44% !important;
+    float: left;
+    margin-left: 1%;
     margin-top: 2% !important;
+}
+
+#login_submit{
+    float: left;
+    margin-left: 1%;
+}
+
+#add_new_trip{
+    margin-Left: 8% !important;
 }
