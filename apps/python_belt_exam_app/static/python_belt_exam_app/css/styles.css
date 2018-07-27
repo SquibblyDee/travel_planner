@@ -203,3 +203,19 @@ a{
     margin-top: 3%;
     box-shadow: 2px 2px black;
 }
+
+#back_btn{
+    margin-top: 15% !important;
+    margin-left: 30%;
+    width: 30%;
+    height: 50px;
+    color: white !important;
+    box-shadow: 2px 2px black;
+    background-color: #77C9D4;
+    border: 1px solid #A5A5AF !important;
+    font-size: 18pt;
+}
+
+th{
+    font-size: 14pt !important;
+}

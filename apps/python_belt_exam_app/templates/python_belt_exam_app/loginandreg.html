@@ -62,7 +62,9 @@
             <script>
             $(document).ready(function() {
                 $('#register').click(function() {
-                    $('.login').hide();
+                    if ($('.login').is(':visible')) {
+                        $('.login').slideToggle("slow");
+                    }
                         $('.registration').slideToggle("slow");
                 });
             });
@@ -91,7 +93,9 @@
             <script>
             $(document).ready(function() {
                 $('#login').click(function() {
-                    $('.registration').hide();
+                    if ($('.registration').is(':visible')) {
+                        $('.registration').slideToggle("slow");
+                    }
                         $('.login').slideToggle("slow");
                 });
             });
