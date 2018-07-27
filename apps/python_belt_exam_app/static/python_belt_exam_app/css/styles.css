@@ -43,7 +43,7 @@ button{
     background: linear-gradient(-90deg, rgb(225, 225, 225), #A5A5AF);
     margin-left: -1.4%;
     margin-right: -1.4%;
-    margin-bottom: 3% !important;
+    margin-bottom: 1.5% !important;
     border-bottom: 4px solid #015249;
     height: 66px;
 }
@@ -51,7 +51,7 @@ button{
 .headerino h3{
     display: inline-block;
     margin-right: 60%;
-    margin-top: 1%;
+    margin-top: .5%;
     margin-left: 2%;
 }
 
@@ -81,7 +81,7 @@ button{
 .login-header h1{
     display: inline-block;
     margin-right: 23%;
-    margin-top: 1%;
+    margin-top: .5%;
     margin-left: 2%;
 }
 
@@ -123,8 +123,14 @@ table{
     color: white;
 }
 
+.trip_table{
+    margin-bottom: 2% !important;
+    margin: 0% 2%;
+}
+
 .other_trip_table{
-    margin-bottom: 3%;
+    margin-bottom: 2% !important;
+    margin: 0% 2%;
 }
 
 #new_trip{
@@ -137,6 +143,8 @@ table{
     width: 20%;
     height: 50px;
     font-size: 16pt;
+    display: inline-block !important;
+    text-align: center !important;
 }
 
 .add_trip_form{
@@ -246,7 +254,7 @@ th{
 .login_bg{
     background: linear-gradient(-90deg, #57BC90, #77C9D4);
     width: 100%;
-    height: 800px;
+    height: auto !important;
     z-index: 10 !important;
 }
 
@@ -258,4 +266,5 @@ th{
     background: linear-gradient(#A5A5AF, rgb(225, 225, 225));
     outline: 4px solid #015249;
     box-shadow: 6px 6px #015249 !important;
+    margin-bottom: 3%;
 }
