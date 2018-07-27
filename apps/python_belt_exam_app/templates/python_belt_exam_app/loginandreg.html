@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="login-header">
-            <h1>Welcome to Trip Buddy</h1>
+            <h1>Welcome to Trip Buddy!</h1>
             <a href=# id="login"><h4>Login</h4></a>
             <a href=# id="register"><h4>Registration</h4></a>
         </div>
@@ -81,11 +81,16 @@
                 $('#register').click(function() {
                     if ($('.login').is(':visible')) {
                         $('.login').slideToggle("slow");
+                            $('.login').promise().done(function(){
+                                $('.registration').slideToggle("slow");
+                        });
                     }
                     if ($('.welcome_text').is(':visible')) {
                         $('.welcome_text').slideToggle("slow");
+                            $('.welcome_text').promise().done(function(){
+                                $('.registration').slideToggle("slow");
+                        });
                     }
-                        $('.registration').slideToggle("slow");
                 });
             });
             </script>
@@ -116,11 +121,16 @@
             $('#login').click(function() {
                 if ($('.registration').is(':visible')) {
                     $('.registration').slideToggle("slow");
+                        $('.registration').promise().done(function(){
+                            $('.login').slideToggle("slow");
+                        });
                 }
                 if ($('.welcome_text').is(':visible')) {
                     $('.welcome_text').slideToggle("slow");
+                        $('.welcome_text').promise().done(function(){
+                            $('.login').slideToggle("slow");
+                        });
                 }
-                    $('.login').slideToggle("slow");
             });
         });
         </script>
