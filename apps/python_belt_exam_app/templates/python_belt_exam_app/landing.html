@@ -79,7 +79,8 @@
             
         </div>
         <script>
-            $('.join').click(function(e){
+            // $('.join').click(function(e){
+                $(document).on('click', '.join', function(e){
                 e.preventDefault()
                 console.log('Sending Ajax request to', $(this).attr('href'))
                 console.log('Submitting the following data', $(this).serialize())
@@ -91,9 +92,12 @@
                     $('#placeholder').html(serverResponse)
                     }
                 })
-                return false
+                console.log('ALL DONE')
+                return false;
             });
-            $('.view').click(function(e){
+
+            // $('.view').click(function(e){
+            $(document).on('click', '.view', function(e){
                 e.preventDefault()
                 console.log('Sending Ajax request to', $(this).attr('href'))
                 console.log('Submitting the following data', $(this).serialize())
@@ -105,9 +109,11 @@
                     $('#placeholder').html(serverResponse)
                     }
                 })
-                return false
+                return false;
             });
-            $('.cancel').click(function(e){
+
+            // $('.cancel').click(function(e){
+            $(document).on('click', '.cancel', function(e){
                 e.preventDefault()
                 console.log('Sending Ajax request to', $(this).attr('href'))
                 console.log('Submitting the following data', $(this).serialize())
@@ -119,9 +125,11 @@
                     $('#placeholder').html(serverResponse)
                     }
                 })
-                return false
+                return false;
             });
-            $('.delete').click(function(e){
+
+            // $('.delete').click(function(e){
+            $(document).on('click', '.delete', function(e){
                 e.preventDefault()
                 console.log('Sending Ajax request to', $(this).attr('href'))
                 console.log('Submitting the following data', $(this).serialize())
@@ -133,7 +141,7 @@
                     $('#placeholder').html(serverResponse)
                     }
                 })
-                return false
+                return false;
             });
         </script>
     </body>

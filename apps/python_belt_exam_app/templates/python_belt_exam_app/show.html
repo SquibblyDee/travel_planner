@@ -1,0 +1,30 @@
+<div class="user_info">
+        <div class="thetrip">
+            {% for row in this_trip %}
+                <div class="categories">
+                    <h2><b>{{ row.destination }}</b></h2>
+                    <h4>Planned By:</h4>
+                    <h4>Description:</h4>
+                    <h4>Travel Date From:</h4>
+                    <h4>Travel Date To:</h4>
+                </div>
+                <div class="values">
+                    <h4>{{ row.trip_users.first_name }} {{ row.trip_users.last_name }}</h4>
+                    <h4>{{ row.description }}</h4>
+                    <h4>{{ row.datefrom }}</h4>
+                    <h4>{{ row.dateto }}</h4>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="otherusers">               
+            <h3><b>Other Users Joining the Trip:</b></h3>
+            {% for member in trip_members %}
+                {% if member.id != member.trip_users.id %}
+                <h4>{{member.first_name}} {{member.last_name}}</h4>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
