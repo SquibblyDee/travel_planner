@@ -108,7 +108,8 @@ def show_process(request, trip_id):
         "trip_members": trip.all_users.exclude(id=trip.trip_users.id),
     }
     print(context)
-    return render(request,'python_belt_exam_app/view.html', context)
+    #return render(request,'python_belt_exam_app/view.html', context)
+    return render(request,'python_belt_exam_app/show.html', context)
 
 def join_process(request, trip_id):
     me = User.objects.get(id=request.session['isloggedin'])
@@ -143,6 +144,13 @@ def delete_process(request, trip_id):
     #return redirect('/travels')
     return render(request,'python_belt_exam_app/all.html', context)
 
+def back(request):
+    me = User.objects.get(id=request.session['isloggedin'])
+    context = {
+                "alltrips" : Trip.objects.exclude(all_users=request.session['isloggedin']),
+                "mytrips" : me.all_trips.all(),
+            }
+    return render(request,'python_belt_exam_app/all.html', context)
 
 # Clears out session / logs out the user
 def logout(request):

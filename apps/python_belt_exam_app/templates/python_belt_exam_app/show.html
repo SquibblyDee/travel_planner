@@ -24,7 +24,24 @@
                 {% endif %}
             {% endfor %}
         </div>
+        <a href="/back" id="back_btn" class="btn btn-primary" role="button">Go Back</a>
     </div>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 </div>
+<script>
+    $(document).on('click', '#back_btn', function(e){
+        e.preventDefault()
+        console.log('Sending Ajax request to', $(this).attr('href'))
+        console.log('Submitting the following data', $(this).serialize())
+        $.ajax({
+          url: $(this).attr('href'), /* Where should this go? */
+          method: 'get', /* Which HTTP verb? */
+          data: $(this).serialize(), /* Any data to send along? */
+          success: function(serverResponse) { /* What code should we run when the server responds? */
+            $('#placeholder').html(serverResponse)
+            }
+        })
+        return false;
+    });
+</script>

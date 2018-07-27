@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 .container{
@@ -31,6 +31,8 @@ button{
     float: right;
     box-shadow: 3px 3px black !important;
     margin-bottom: 5% !important;
+    background-color: #77C9D4 !important;
+    border: 1px solid #A5A5AF !important;
 }
 /* EVERYTHING ABOVE HERE NEEDS TO STAY THE SAME */
 
@@ -137,6 +139,8 @@ table{
     margin-bottom: 3%;
     color: white !important;
     box-shadow: 2px 2px black;
+    background-color: #77C9D4;
+    border: 1px solid #A5A5AF !important;
 }
 
 .add_trip_form{

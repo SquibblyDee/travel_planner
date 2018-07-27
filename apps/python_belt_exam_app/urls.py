@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^process_login$', views.process_login),
     url(r'^travels$', views.landing),
     url(r'^addtrip$', views.addtrip),
+    url(r'^back$', views.back),
     url(r'^process_trip$', views.processtrip),
     url(r'^view/(?P<trip_id>\d+)$', views.show_process),
     url(r'^join/(?P<trip_id>\d+)$', views.join_process),
