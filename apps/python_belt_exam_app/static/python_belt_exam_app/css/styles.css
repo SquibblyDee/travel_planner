@@ -4,8 +4,10 @@
     /* outline: 1px solid red; */
 }
 
-.container{
+.containment{
     height: auto !important;
+    background-color: orange;
+    background: linear-gradient(-90deg, #57BC90, #77C9D4);
 }
 
 .registration{
@@ -57,9 +59,8 @@ button{
 .headerino a{
     display: inline-block;
     margin-right: 3%;
-    border-left: 4px solid #015249;
-    padding-left: 3% !important;  
-    padding: 1% 0%;
+    padding-left: 2% !important;  
+    padding: .5% 0%;
     float: right;
 }
 
@@ -69,11 +70,6 @@ button{
 }
 
 /* BELOW HERE ARE ALL OUR NEW VISUAL TWEAKS */
-
-.container{
-    background: linear-gradient(-90deg, #57BC90, #77C9D4);
-    height: 700px;
-}
 
 .login-header{
     background: linear-gradient(-90deg, rgb(225, 225, 225), #A5A5AF);
@@ -117,6 +113,7 @@ thead, td, th{
 
 table{
     outline: 4px solid #015249;
+    font-size: 14pt !important;
 }
 
 .trip_table h3, td, th{
@@ -133,6 +130,7 @@ table{
 
 #new_trip{
     margin-bottom: 3%;
+    margin-left: 36%;
     color: white !important;
     box-shadow: 2px 2px black;
     background-color: #77C9D4;
@@ -227,6 +225,8 @@ th{
 #add_trip_submit_btn{
     width: 60% !important;
     height: 60px;
+    font-size: 16pt;
+    text-decoration: underline !important;
 }
 
 #video-background{ 
@@ -255,7 +255,7 @@ th{
     margin-top: 1%;
     display: inline-block;
     padding: 5%;
-    background: linear-gradient(-90deg, rgb(225, 225, 225), #A5A5AF);
+    background: linear-gradient(#A5A5AF, rgb(225, 225, 225));
     outline: 4px solid #015249;
     box-shadow: 6px 6px #015249 !important;
 }
