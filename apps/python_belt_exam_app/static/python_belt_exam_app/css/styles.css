@@ -13,7 +13,7 @@
     width: 45%;
     display: inline-block;
     margin: 0% 4% 0% 4%;
-    margin-left: 30%;
+    margin-left: 37%;
 }
 
 .login{
@@ -254,7 +254,7 @@ th{
 .login_bg{
     background: linear-gradient(-90deg, #57BC90, #77C9D4);
     width: 100%;
-    height: auto !important;
+    height: 800px;
     z-index: 10 !important;
 }
 
@@ -266,5 +266,14 @@ th{
     background: linear-gradient(#A5A5AF, rgb(225, 225, 225));
     outline: 4px solid #015249;
     box-shadow: 6px 6px #015249 !important;
-    margin-bottom: 3%;
+}
+
+input{
+    box-shadow: 3px 3px #015249;
+}
+
+#register_btn{
+    float: right;
+    margin-right: 44% !important;
+    margin-top: 2% !important;
 }
